@@ -1,0 +1,162 @@
+@prefix : <http://defisocialonto.org/defisocialonto#>.
+@prefix gufo: <http://purl.org/nemo/gufo#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<http://defisocialonto.org/defisocialonto> rdf:type owl:Ontology;
+    owl:imports gufo:.
+:DiscourseUnit rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "DiscourseUnit"@en.
+:Actor rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Actor"@en.
+:Source rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Source"@en.
+:Platform rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Platform"@en.
+:Protocol rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Protocol"@en.
+:Operator rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Operator"@en.
+:Investor rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Investor"@en.
+:Regulator rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Regulator"@en.
+:SystemActor rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "SystemActor"@en.
+:LinguisticVariant rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "LinguisticVariant"@en.
+:Concept rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Concept"@en.
+:Risk rdf:type owl:Class, gufo:SituationType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Situation;
+    rdfs:label "Risk"@en.
+:ConsumerProtectionMeasure rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "ConsumerProtectionMeasure"@en.
+:ActionableForesight rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "ActionableForesight"@en.
+:ConsumerProtectionPrinciple rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "ConsumerProtectionPrinciple"@en.
+:Operator rdfs:subClassOf :Actor.
+:Investor rdfs:subClassOf :Actor.
+:Regulator rdfs:subClassOf :Actor.
+:SystemActor rdfs:subClassOf :Actor.
+:id rdfs:domain :DiscourseUnit;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "id"@en.
+:text_1 rdfs:domain :DiscourseUnit;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "text"@en.
+:date rdfs:domain :DiscourseUnit;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "date"@en.
+:name_1 rdfs:domain :Actor;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "name"@en.
+:url rdfs:domain :Source;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "url"@en.
+:type rdfs:domain :Source;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "type"@en.
+:name_3 rdfs:domain :Platform;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "name"@en.
+:name_2 rdfs:domain :Protocol;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "name"@en.
+:text rdfs:domain :LinguisticVariant;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "text"@en.
+:name rdfs:domain :Concept;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "name"@en.
+:description_4 rdfs:domain :Concept;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "description"@en.
+:name_6 rdfs:domain :Risk;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "name"@en.
+:description_3 rdfs:domain :Risk;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "description"@en.
+:name_4 rdfs:domain :ConsumerProtectionMeasure;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "name"@en.
+:description_2 rdfs:domain :ConsumerProtectionMeasure;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "description"@en.
+:name_5 rdfs:domain :ActionableForesight;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "name"@en.
+:description rdfs:domain :ActionableForesight;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "description"@en.
+:number rdfs:domain :ConsumerProtectionPrinciple;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "number"@en.
+:description_1 rdfs:domain :ConsumerProtectionPrinciple;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "description"@en.
+:isProducedBy rdf:type owl:ObjectProperty;
+    rdfs:domain :DiscourseUnit;
+    rdfs:range :Actor.
+:hasSource rdf:type owl:ObjectProperty;
+    rdfs:domain :DiscourseUnit;
+    rdfs:range :Source.
+:refersToPlatform rdf:type owl:ObjectProperty;
+    rdfs:domain :DiscourseUnit;
+    rdfs:range :Platform.
+:refersToProtocol rdf:type owl:ObjectProperty;
+    rdfs:domain :DiscourseUnit;
+    rdfs:range :Protocol.
+:discourseUnitHasLinguisticVariant rdf:type owl:ObjectProperty;
+    rdfs:domain :DiscourseUnit;
+    rdfs:range :LinguisticVariant.
+:express rdf:type owl:ObjectProperty;
+    rdfs:domain :LinguisticVariant;
+    rdfs:range :Concept.
+:isAssociatedWith rdf:type owl:ObjectProperty;
+    rdfs:domain :Concept;
+    rdfs:range :Risk.
+:isAddressedBy rdf:type owl:ObjectProperty;
+    rdfs:domain :Risk;
+    rdfs:range :ConsumerProtectionMeasure;
+    rdfs:label "isAddressedBy"@en.
+:riskHasActionableForesight rdf:type owl:ObjectProperty;
+    rdfs:domain :Risk;
+    rdfs:range :ActionableForesight.
+:isCoveredBy rdf:type owl:ObjectProperty;
+    rdfs:domain :ConsumerProtectionMeasure;
+    rdfs:range :ConsumerProtectionPrinciple;
+    rdfs:label "isCoveredBy"@en.
