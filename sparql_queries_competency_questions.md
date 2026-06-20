@@ -1,5 +1,6 @@
 - **CQ1**
-```PREFIX defi: <http://defisocialonto.org/defisocialonto#>
+```sparql
+PREFIX defi: <http://defisocialonto.org/defisocialonto#>
 
 SELECT
   ?linguisticVariant
@@ -19,10 +20,12 @@ WHERE {
 }
 GROUP BY ?linguisticVariant ?variantText
 ORDER BY DESC(?frequency)
-LIMIT 5```
+LIMIT 5
+```
 
 - **CQ2**
-```PREFIX defi: <http://defisocialonto.org/defisocialonto#>
+```sparql
+PREFIX defi: <http://defisocialonto.org/defisocialonto#>
 
 SELECT
   ?risk
@@ -49,10 +52,12 @@ WHERE {
 }
 GROUP BY ?risk ?riskName ?riskDescription
 ORDER BY DESC(?frequency)
-LIMIT 5```
+LIMIT 5
+```
 
 - **CQ3**
-```PREFIX defi: <http://defisocialonto.org/defisocialonto#>
+```sparql
+PREFIX defi: <http://defisocialonto.org/defisocialonto#>
 
 SELECT
   ?measure
@@ -79,10 +84,12 @@ WHERE {
   }
 }
 GROUP BY ?measure ?measureName ?measureDescription
-ORDER BY DESC(?numberOfLinkedRisks) ?measureName```
+ORDER BY DESC(?numberOfLinkedRisks) ?measureName
+```
 
 - **CQ4**
-```PREFIX defi: <http://defisocialonto.org/defisocialonto#>
+```sparql
+PREFIX defi: <http://defisocialonto.org/defisocialonto#>
 
 SELECT
   ?foresightName
@@ -109,4 +116,5 @@ WHERE {
              defi:description ?foresightDescription .
 }
 GROUP BY ?foresightName ?foresightDescription
-ORDER BY DESC(?numberOfDiscourseUnits) ?foresightName```
+ORDER BY DESC(?numberOfDiscourseUnits) ?foresightName
+```
