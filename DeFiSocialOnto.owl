@@ -1,0 +1,848 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://defisocialonto.org/defisocialonto#"
+     xml:base="http://defisocialonto.org/defisocialonto"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:gufo="http://purl.org/nemo/gufo#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://defisocialonto.org/defisocialonto">
+        <owl:imports rdf:resource="http://purl.org/nemo/gufo#"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#contains -->
+
+    <owl:ObjectProperty rdf:about="http://defisocialonto.org/defisocialonto#contains">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://defisocialonto.org/defisocialonto#DiscourseUnit"/>
+        <rdfs:range rdf:resource="http://defisocialonto.org/defisocialonto#LinguisticVariant"/>
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#expresses -->
+
+    <owl:ObjectProperty rdf:about="http://defisocialonto.org/defisocialonto#expresses">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://defisocialonto.org/defisocialonto#LinguisticVariant"/>
+        <rdfs:range rdf:resource="http://defisocialonto.org/defisocialonto#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#hasSource -->
+
+    <owl:ObjectProperty rdf:about="http://defisocialonto.org/defisocialonto#hasSource">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://defisocialonto.org/defisocialonto#DiscourseUnit"/>
+        <rdfs:range rdf:resource="http://defisocialonto.org/defisocialonto#Source"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#isAddressedBy -->
+
+    <owl:ObjectProperty rdf:about="http://defisocialonto.org/defisocialonto#isAddressedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://defisocialonto.org/defisocialonto#Risk"/>
+        <rdfs:range rdf:resource="http://defisocialonto.org/defisocialonto#ConsumerProtectionMeasure"/>
+        <rdfs:label xml:lang="en">isAddressedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#isAssociatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://defisocialonto.org/defisocialonto#isAssociatedWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://defisocialonto.org/defisocialonto#Concept"/>
+        <rdfs:range rdf:resource="http://defisocialonto.org/defisocialonto#Risk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#isCoveredBy -->
+
+    <owl:ObjectProperty rdf:about="http://defisocialonto.org/defisocialonto#isCoveredBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://defisocialonto.org/defisocialonto#ConsumerProtectionMeasure"/>
+        <rdfs:range rdf:resource="http://defisocialonto.org/defisocialonto#ConsumerProtectionPrinciple"/>
+        <rdfs:label xml:lang="en">isCoveredBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#isProducedBy -->
+
+    <owl:ObjectProperty rdf:about="http://defisocialonto.org/defisocialonto#isProducedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://defisocialonto.org/defisocialonto#DiscourseUnit"/>
+        <rdfs:range rdf:resource="http://defisocialonto.org/defisocialonto#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#refersToPlatform -->
+
+    <owl:ObjectProperty rdf:about="http://defisocialonto.org/defisocialonto#refersToPlatform">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://defisocialonto.org/defisocialonto#DiscourseUnit"/>
+        <rdfs:range rdf:resource="http://defisocialonto.org/defisocialonto#Platform"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#refersToProtocol -->
+
+    <owl:ObjectProperty rdf:about="http://defisocialonto.org/defisocialonto#refersToProtocol">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://defisocialonto.org/defisocialonto#DiscourseUnit"/>
+        <rdfs:range rdf:resource="http://defisocialonto.org/defisocialonto#Protocol"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#signals -->
+
+    <owl:ObjectProperty rdf:about="http://defisocialonto.org/defisocialonto#signals">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://defisocialonto.org/defisocialonto#Risk"/>
+        <rdfs:range rdf:resource="http://defisocialonto.org/defisocialonto#ActionableForesight"/>
+        <rdfs:label xml:lang="en">signals</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#date -->
+
+    <owl:DatatypeProperty rdf:about="http://defisocialonto.org/defisocialonto#date">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="en">date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#description -->
+
+    <owl:DatatypeProperty rdf:about="http://defisocialonto.org/defisocialonto#description">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#id -->
+
+    <owl:DatatypeProperty rdf:about="http://defisocialonto.org/defisocialonto#id">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#name -->
+
+    <owl:DatatypeProperty rdf:about="http://defisocialonto.org/defisocialonto#name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#number -->
+
+    <owl:DatatypeProperty rdf:about="http://defisocialonto.org/defisocialonto#number">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#rawText -->
+
+    <owl:DatatypeProperty rdf:about="http://defisocialonto.org/defisocialonto#rawText">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">rawText</rdfs:label>
+        <skos:altLabel xml:lang="en">rawText</skos:altLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#type -->
+
+    <owl:DatatypeProperty rdf:about="http://defisocialonto.org/defisocialonto#type">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#url -->
+
+    <owl:DatatypeProperty rdf:about="http://defisocialonto.org/defisocialonto#url">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">url</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#hasQualityValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/nemo/gufo#hasQualityValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#ActionableForesight -->
+
+    <owl:Class rdf:about="http://defisocialonto.org/defisocialonto#ActionableForesight">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#description"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Actor -->
+
+    <owl:Class rdf:about="http://defisocialonto.org/defisocialonto#Actor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#name"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Concept -->
+
+    <owl:Class rdf:about="http://defisocialonto.org/defisocialonto#Concept">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#isAssociatedWith"/>
+                <owl:someValuesFrom rdf:resource="http://defisocialonto.org/defisocialonto#Risk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#description"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Consumer -->
+
+    <owl:Class rdf:about="http://defisocialonto.org/defisocialonto#Consumer">
+        <rdfs:subClassOf rdf:resource="http://defisocialonto.org/defisocialonto#Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#ConsumerProtectionMeasure -->
+
+    <owl:Class rdf:about="http://defisocialonto.org/defisocialonto#ConsumerProtectionMeasure">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#isCoveredBy"/>
+                <owl:someValuesFrom rdf:resource="http://defisocialonto.org/defisocialonto#ConsumerProtectionPrinciple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#description"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#ConsumerProtectionPrinciple -->
+
+    <owl:Class rdf:about="http://defisocialonto.org/defisocialonto#ConsumerProtectionPrinciple">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#description"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#number"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#DiscourseUnit -->
+
+    <owl:Class rdf:about="http://defisocialonto.org/defisocialonto#DiscourseUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#contains"/>
+                <owl:someValuesFrom rdf:resource="http://defisocialonto.org/defisocialonto#LinguisticVariant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#isProducedBy"/>
+                <owl:someValuesFrom rdf:resource="http://defisocialonto.org/defisocialonto#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#refersToPlatform"/>
+                <owl:someValuesFrom rdf:resource="http://defisocialonto.org/defisocialonto#Platform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#refersToProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://defisocialonto.org/defisocialonto#Protocol"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#hasSource"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://defisocialonto.org/defisocialonto#Source"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#date"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#id"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#rawText"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Investor -->
+
+    <owl:Class rdf:about="http://defisocialonto.org/defisocialonto#Investor">
+        <rdfs:subClassOf rdf:resource="http://defisocialonto.org/defisocialonto#Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#LinguisticVariant -->
+
+    <owl:Class rdf:about="http://defisocialonto.org/defisocialonto#LinguisticVariant">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#expresses"/>
+                <owl:someValuesFrom rdf:resource="http://defisocialonto.org/defisocialonto#Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#rawText"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Platform -->
+
+    <owl:Class rdf:about="http://defisocialonto.org/defisocialonto#Platform">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Protocol -->
+
+    <owl:Class rdf:about="http://defisocialonto.org/defisocialonto#Protocol">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Regulator -->
+
+    <owl:Class rdf:about="http://defisocialonto.org/defisocialonto#Regulator">
+        <rdfs:subClassOf rdf:resource="http://defisocialonto.org/defisocialonto#Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Risk -->
+
+    <owl:Class rdf:about="http://defisocialonto.org/defisocialonto#Risk">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#isAddressedBy"/>
+                <owl:someValuesFrom rdf:resource="http://defisocialonto.org/defisocialonto#ConsumerProtectionMeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#signals"/>
+                <owl:someValuesFrom rdf:resource="http://defisocialonto.org/defisocialonto#ActionableForesight"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#description"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Source -->
+
+    <owl:Class rdf:about="http://defisocialonto.org/defisocialonto#Source">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#type"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://defisocialonto.org/defisocialonto#url"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#SystemActor -->
+
+    <owl:Class rdf:about="http://defisocialonto.org/defisocialonto#SystemActor">
+        <rdfs:subClassOf rdf:resource="http://defisocialonto.org/defisocialonto#Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#FunctionalComplex -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Kind -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Kind"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Role -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Role"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Situation -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Situation"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#SituationType -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#SituationType"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#ActionableForesight -->
+
+    <owl:NamedIndividual rdf:about="http://defisocialonto.org/defisocialonto#ActionableForesight">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Actor -->
+
+    <owl:NamedIndividual rdf:about="http://defisocialonto.org/defisocialonto#Actor">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Concept -->
+
+    <owl:NamedIndividual rdf:about="http://defisocialonto.org/defisocialonto#Concept">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Consumer -->
+
+    <owl:NamedIndividual rdf:about="http://defisocialonto.org/defisocialonto#Consumer">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#ConsumerProtectionMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://defisocialonto.org/defisocialonto#ConsumerProtectionMeasure">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#ConsumerProtectionPrinciple -->
+
+    <owl:NamedIndividual rdf:about="http://defisocialonto.org/defisocialonto#ConsumerProtectionPrinciple">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#DiscourseUnit -->
+
+    <owl:NamedIndividual rdf:about="http://defisocialonto.org/defisocialonto#DiscourseUnit">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Investor -->
+
+    <owl:NamedIndividual rdf:about="http://defisocialonto.org/defisocialonto#Investor">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#LinguisticVariant -->
+
+    <owl:NamedIndividual rdf:about="http://defisocialonto.org/defisocialonto#LinguisticVariant">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Platform -->
+
+    <owl:NamedIndividual rdf:about="http://defisocialonto.org/defisocialonto#Platform">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Protocol -->
+
+    <owl:NamedIndividual rdf:about="http://defisocialonto.org/defisocialonto#Protocol">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Regulator -->
+
+    <owl:NamedIndividual rdf:about="http://defisocialonto.org/defisocialonto#Regulator">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Risk -->
+
+    <owl:NamedIndividual rdf:about="http://defisocialonto.org/defisocialonto#Risk">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SituationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#Source -->
+
+    <owl:NamedIndividual rdf:about="http://defisocialonto.org/defisocialonto#Source">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://defisocialonto.org/defisocialonto#SystemActor -->
+
+    <owl:NamedIndividual rdf:about="http://defisocialonto.org/defisocialonto#SystemActor">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#ActionableForesight">
+        <rdfs:label xml:lang="en">ActionableForesight</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#Actor">
+        <rdfs:label xml:lang="en">Actor</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#Concept">
+        <rdfs:label xml:lang="en">Concept</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#Consumer">
+        <rdfs:label xml:lang="en">Operator</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#ConsumerProtectionMeasure">
+        <rdfs:label xml:lang="en">ConsumerProtectionMeasure</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#ConsumerProtectionPrinciple">
+        <rdfs:label xml:lang="en">ConsumerProtectionPrinciple</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#DiscourseUnit">
+        <rdfs:label xml:lang="en">DiscourseUnit</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#Investor">
+        <rdfs:label xml:lang="en">Investor</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#LinguisticVariant">
+        <rdfs:label xml:lang="en">LinguisticVariant</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#Platform">
+        <rdfs:label xml:lang="en">Platform</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#Protocol">
+        <rdfs:label xml:lang="en">Protocol</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#Regulator">
+        <rdfs:label xml:lang="en">Regulator</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#Risk">
+        <rdfs:label xml:lang="en">Risk</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#Source">
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#SystemActor">
+        <rdfs:label xml:lang="en">SystemActor</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#ActionableForesight"/>
+            <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#Actor"/>
+            <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#Concept"/>
+            <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#ConsumerProtectionMeasure"/>
+            <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#ConsumerProtectionPrinciple"/>
+            <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#DiscourseUnit"/>
+            <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#LinguisticVariant"/>
+            <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#Platform"/>
+            <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#Protocol"/>
+            <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#Risk"/>
+            <rdf:Description rdf:about="http://defisocialonto.org/defisocialonto#Source"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
